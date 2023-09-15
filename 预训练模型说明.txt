@@ -1,0 +1,7 @@
+需要用到的预训练模型如下：
+1.resnet101.pkl，是jittor的imagenet预训练模型，可以通过
+        wget https://cg.cs.tsinghua.edu.cn/jittor/assets/build/checkpoints/resnet101.pkl下载到本地，将该预训练模型置于./pretrained/deeplab_jittor/pretrained文件夹中。
+    
+2.deeplab语义分割预训练模型，可以通过运行./pretrained/deeplab_jittor文件夹下的train.py训练得到，训练deeplab用到的数据集即为比赛提供的训练集，我们将数据集分为9200张的训练集和800张的验证集。如果想要正常训练，可以在deeplab下构造一个datasets文件夹，其中再构造train和val两个文件夹，并分别再构造imgs和labels两个文件夹，分别放入训练集和验证集的原图和语义分割图。在此处我们将我们预训练好的模型，置于./pretrained文件夹中。
+
+3.vgg预训练模型 在训练过程中用到了vgg_loss，其中的vgg网络在构造时将pretrained设置为true，会自动下载jittor预训练好的vgg网络。

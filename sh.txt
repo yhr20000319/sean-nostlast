@@ -1,0 +1,2 @@
+python test.py --input_path ./datasets/val_B_labels_resized/ --img_path ./datasets/train_resized/imgs
+python train.py --input_path ./datasets/train_resized
